@@ -21,8 +21,8 @@ export const teamMembers = [
   {
     name: 'Ilya Kosobrukhov',
     role: 'Developer (Dev)',
-    blurb: '',
-    imageURL: '',
+    blurb: 'Hey, my name is Ilya, I am currently studying a Bachelor of Information Technology, minoring in Cisco Networking and Cloud Computing and I am one of the developers for Team 39s capstone project. Outside of university, I enjoy a variety of video games and dabbling in musical instruments. I look forward to working with the rest of the team, and learning new technologies while moving towards our project outcome.',
+    imageURL: '/team/Ilya.jpeg',
   },
   {
     name: 'Sameer Siddiqui',
