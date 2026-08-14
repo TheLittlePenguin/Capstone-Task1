@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import { LayoutDashboard, StickyNote, User, Settings } from 'lucide-react'
 
 const navItems = [
-  { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
-  { href: '/notes', label: 'Notes', icon: StickyNote },
-  { href: '/profile', label: 'Profile', icon: User },
-  { href: '/settings', label: 'Settings', icon: Settings },
+  { href: '/dashboard', label: 'Dashboard'},
+  { href: '/notes', label: 'Notes'},
+  { href: '/profile', label: 'Profile'},
+  { href: '/team-page', label: 'Team Page'},
+  { href: '/settings', label: 'Settings'},
 ]
 
 export function Sidebar() {
@@ -15,13 +15,12 @@ export function Sidebar() {
         <span className="text-sm font-semibold">{process.env.NEXT_PUBLIC_APP_NAME ?? 'App'}</span>
       </div>
       <nav className="flex-1 space-y-1 p-3">
-        {navItems.map(({ href, label, icon: Icon }) => (
+        {navItems.map(({ href, label,}) => (
           <Link
             key={href}
             href={href}
-            className="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-white"
+            className="flex items-center rounded-md px-3 py-2 text-sm font-medium text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-white"
           >
-            <Icon className="h-4 w-4 shrink-0" />
             {label}
           </Link>
         ))}
