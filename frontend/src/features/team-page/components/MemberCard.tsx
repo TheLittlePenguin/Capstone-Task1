@@ -7,10 +7,10 @@ type Member = {
 
 export function MemberCard({ member }: { member: Member }) {
   return (
-    <div className="flex p-4 m-1.5">
+    <div data-testid="membercard" className="flex p-4 m-1.5">
       <div className="rounded-full flex size-32 shrink-0 items-center justify-center m-3">
         {member.imageURL ? (
-          <img className="size-full rounded-full object-cover " src={member.imageURL} alt={member.name} />
+          <img data-testid="memberimg" className="size-full rounded-full object-cover " src={member.imageURL} alt={member.name} />
         ) : (
           <span>Image</span>
         )}
@@ -21,7 +21,7 @@ export function MemberCard({ member }: { member: Member }) {
           <div className="bg-background-text-gray p-2">{member.role}</div>
         </div>
         <div className="p-2 ">
-        <p >{member.blurb}</p>
+        <p data-testid="memberblurb" >{member.blurb}</p>
       </div>
       </div>
     </div>

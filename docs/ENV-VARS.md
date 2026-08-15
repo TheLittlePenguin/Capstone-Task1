@@ -35,6 +35,9 @@ pnpm run env:sync       # also runs automatically before `pnpm run dev`
 | `CORS_ORIGIN` | No | No | Allowed CORS origin for the API (empty = deny all cross-origin) |
 | `PORT` | No | No | Local Functions dev server port (default `5001`) |
 | `STITCH_API_KEY` | **Yes** | No | Google Stitch key for the Claude Code MCP (stays in root `.env` only) |
+| `TEST_BASE_URL` | No | Yes | URL for Playwright E2E tests (`http://localhost:3000` locally) |
+| `TEST_EMAIL` | No | Yes | Email to use for E2E tests |
+| `TEST_PASSWORD` | **Yes** | Yes | Password to use for E2E tests |
 
 `NEXT_PUBLIC_*` values are compiled into the browser bundle — that prefix must **never** appear on a secret (a Claude Code hook blocks this).
 
